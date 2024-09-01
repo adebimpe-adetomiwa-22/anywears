@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { CircularProgress, IconButton } from '@mui/material';
 import Loader from '../components/loader/Loader';
-import Product from '../components/products/product';
+// import Product from '../components/products/product';
+import Product from '../components/products/Product';
 import { useSelector } from 'react-redux';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
