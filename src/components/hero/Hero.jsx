@@ -53,8 +53,9 @@ const Hero = () => {
                     m={2}
                     mt={3}
                 >
-                    Welcome to our home page we sell different kinds of outfits
-                    and wears,.
+                    Whether you're looking for the latest fashion, cutting-edge
+                    electronics, or everyday essentials, we've got everything
+                    you need to elevate your lifestyle.
                 </Typography>
                 {/* <Button variant='contained' size='small' fontSize='12px'>
                     Shop Now
