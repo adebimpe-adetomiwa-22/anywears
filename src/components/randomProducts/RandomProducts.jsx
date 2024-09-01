@@ -1,7 +1,7 @@
 import { getProducts } from '../../features/products/productsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import Product from '../products/product';
+import Product from '../products/Product';
 import { CircularProgress } from '@mui/material';
 
 const RandomProducts = () => {
