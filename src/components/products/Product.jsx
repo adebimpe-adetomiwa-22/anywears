@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 
 const Product = ({ id, price, title, image }) => {
     return (
-        <Link to={`/product/${id}`}>
+        <Link to={`/anywears/product/${id}`}>
             <Box
                 // width='150px'
                 sx={{

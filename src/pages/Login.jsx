@@ -72,7 +72,7 @@ const Login = () => {
                     <Stack>
                         <Typography variant='body2'>
                             New customer?{' '}
-                            <Link to='/signup'>
+                            <Link to='/anywears/signup'>
                                 <Typography
                                     component='span'
                                     sx={{

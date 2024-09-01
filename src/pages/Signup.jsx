@@ -192,7 +192,7 @@ const Signup = () => {
                     <Stack>
                         <Typography variant='body2'>
                             Already a customer?{' '}
-                            <Link to='/login'>
+                            <Link to='/anywears/login'>
                                 <Typography
                                     component='span'
                                     sx={{

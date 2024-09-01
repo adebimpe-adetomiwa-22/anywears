@@ -92,7 +92,7 @@ const Sidebar = ({ handleClose }) => {
                 <Box>
                     <div className='p-3'>
                         <List className='flex flex-col gap-5'>
-                            <Link to={`/category/electronics`}>
+                            <Link to={`/anywears/category/electronics`}>
                                 <div className='list'>
                                     <div className='list-icon'>
                                         <CableRoundedIcon fontSize='small' />
@@ -100,7 +100,7 @@ const Sidebar = ({ handleClose }) => {
                                     <p className='list-text'>Electronics</p>
                                 </div>
                             </Link>
-                            <Link to={`/category/jewelery`}>
+                            <Link to={`/anywears/category/jewelery`}>
                                 <div className='list'>
                                     <div className='list-icon'>
                                         <DiamondRoundedIcon fontSize='small' />
@@ -108,7 +108,7 @@ const Sidebar = ({ handleClose }) => {
                                     <p className='list-text'>Jewelery</p>
                                 </div>
                             </Link>
-                            <Link to={`/category/men's clothing`}>
+                            <Link to={`/anywears/category/men's clothing`}>
                                 <div className='list'>
                                     <div className='list-icon'>
                                         <ManRoundedIcon fontSize='small' />
@@ -116,7 +116,7 @@ const Sidebar = ({ handleClose }) => {
                                     <p className='list-text'>Men's clothing</p>
                                 </div>
                             </Link>
-                            <Link to={`/category/women's clothing`}>
+                            <Link to={`/anywears/category/women's clothing`}>
                                 <div className='list'>
                                     <div className='list-icon'>
                                         <WomanRoundedIcon fontSize='small' />

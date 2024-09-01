@@ -59,7 +59,7 @@ const Hero = () => {
                 {/* <Button variant='contained' size='small' fontSize='12px'>
                     Shop Now
                 </Button> */}
-                <Link to='/login'>
+                <Link to='/anywears/login'>
                     <button className='text-xs bg-main px-5 py-1.5 rounded-sm sm:px-7 sm:py-2 text-primary transtion hover:opacity-90'>
                         Shop Now
                     </button>
