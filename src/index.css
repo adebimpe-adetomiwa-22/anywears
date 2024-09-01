@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply bg-primary;
+    }
+    .container {
+        @apply p-3;
+    }
+
+    .btn {
+        @apply px-3 py-0.5 text-sm rounded-smooth transition duration-200 hover:opacity-90;
+
+        @apply sm:px-3 sm:py-1 sm:text-base sm:rounded-smooth;
+    }
+
+    .category-item {
+        @apply flex flex-col items-center border-2 rounded-md border-main py-1 text-main justify-center text-sm text-center transition cursor-pointer;
+
+        @apply hover:bg-main hover:text-primary;
+    }
+
+    .list {
+        @apply flex gap-3 items-center text-gray-500 transition hover:text-main;
+    }
+
+    .list-icon {
+        @apply flex justify-center items-center;
+    }
+
+    .form-wrapper {
+        @apply bg-slate-50 shadow-sm flex gap-10 p-5 rounded-md flex-col;
+
+        @apply pt-12 w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-2/6;
+    }
+
+    /* .form-resize {
+        @apply ;
+    } */
+
+    /* .list-icon {
+        @apply text-slate-500;
+    } */
+
+    .list-text {
+        @apply text-sm md:text-base;
+    }
+
+    .brand-text {
+        font-family: 'Viner Hand ITC', sans-serif;
+    }
+
+    .footer {
+        @apply bg-secondary text-center;
+    }
+}
+
+/* flex flex-col items-center border-2 rounded-md border-main py-1 text-main justify-center text-sm text-center
+flex flex-col items-center border-2 rounded-md border-main py-1 text-main justify-center text-sm text-center
+flex flex-col items-center border-2 rounded-md border-main py-1 text-main justify-center text-sm text-center
+flex flex-col items-center border-2 rounded-md border-main py-1 text-main justify-center text-sm text-center */
