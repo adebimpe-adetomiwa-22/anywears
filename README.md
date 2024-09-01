@@ -1,13 +1,13 @@
 # E-Commerce Project
 
-This is a fully functional e-commerce web application built using modern web development tools and practices. The project uses React, Redux Toolkit, Tailwind CSS, Material UI, and Fakestore API to deliver a seamless shopping experience.
+This is a portfolio e-commerce web application built to demonstrate the functionality of a typical online store. The project showcases various features like product listing, shopping cart, and checkout processes but does not support real transactions.
 
 ## Features
 
 -   **Product Listing:** Displays a list of products fetched from the Fakestore API.
 -   **Product Details:** Detailed view of each product with images, descriptions, and prices.
 -   **Shopping Cart:** Add products to the cart, adjust quantities, and view the total price.
--   **Checkout Process:** Users can proceed to checkout from the cart.
+-   **Checkout Process:** Users can simulate a checkout process (no real transactions).
 -   **Responsive Design:** The application is fully responsive, ensuring a great user experience on both desktop and mobile devices.
 
 ## Tech Stack
@@ -55,8 +55,10 @@ This is a fully functional e-commerce web application built using modern web dev
 
 -   Navigate through different products using the product listing page.
 -   View detailed information about each product by clicking on it.
--   Add products to your cart and proceed to checkout.
+-   Add products to your cart and simulate the checkout process.
 -   The site is fully responsive and can be accessed on any device.
+
+**Note:** This project is for portfolio purposes only, and no real purchases or transactions can be made.
 
 ## Contributing
 
