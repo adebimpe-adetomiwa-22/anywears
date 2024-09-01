@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        @apply bg-primary;
+        @apply bg-primary scroll-smooth;
     }
     .container {
         @apply p-3;
@@ -54,6 +54,10 @@
 
     .footer {
         @apply bg-secondary text-center;
+    }
+
+    .footer > .container {
+        @apply flex flex-col gap-5;
     }
 }
 

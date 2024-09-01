@@ -39,6 +39,7 @@ const Hero = () => {
                     <Typography
                         component='span'
                         color='#ffffff'
+                        // color='#9E682A'
                         fontWeight='bold'
                         fontSize='inherit'
                     >
@@ -53,9 +54,7 @@ const Hero = () => {
                     m={2}
                     mt={3}
                 >
-                    Whether you're looking for the latest fashion, cutting-edge
-                    electronics, or everyday essentials, we've got everything
-                    you need to elevate your lifestyle.
+                    We've got everything you need to elevate your lifestyle.
                 </Typography>
                 {/* <Button variant='contained' size='small' fontSize='12px'>
                     Shop Now

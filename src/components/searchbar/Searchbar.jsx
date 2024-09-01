@@ -32,7 +32,8 @@ const Searchbar = ({ padding, right }) => {
                 onChange={(event) => dispatch(search(event.target.value))}
             />
             <IconButton
-                color='first'
+                // color='first'
+                // color='inherit'
                 // size={searching ? 'small' : 'medium'}
                 onClick={searching ? clearSearch : null}
                 sx={{

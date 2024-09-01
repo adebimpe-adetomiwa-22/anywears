@@ -73,7 +73,11 @@ const Navbar = () => {
                         <div className='hidden sm:block mr-3'>
                             <Searchbar padding={0} right='0px' />
                         </div>
-                        <Stack direction='row' alignItems='center'>
+                        <Stack
+                            direction='row'
+                            alignItems='center'
+                            className='text-[#666666]'
+                        >
                             <IconButton color='inherit' size='small'>
                                 <AccountCircleIcon sx={iconSize} />
                             </IconButton>
@@ -84,7 +88,20 @@ const Navbar = () => {
                                         '& .MuiBadge-badge': {
                                             backgroundColor: '#9E682A',
                                             color: '#EEE6DD',
-                                            // color: '#D8C5AB',
+                                            fontSize: {
+                                                xs: '0.6rem',
+                                                sm: '0.7rem',
+                                            },
+                                            minHeight: {
+                                                xs: '13px',
+                                                sm: '15px',
+                                            },
+                                            minWidth: {
+                                                xs: '13px',
+                                                sm: '15px',
+                                            },
+                                            borderRadius: '50%',
+                                            border: '1.5px solid #EEE6DD',
                                         },
                                     }}
                                 >
