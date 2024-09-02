@@ -46,7 +46,7 @@ const Product = () => {
                         className='h-72 w-full object-contain sm:w-2/5'
                     />
                     <div className='description mt-5'>
-                        <h2 className='mb-3 text-base sm:text-lg font-semibold'>
+                        <h2 className='mb-3 text-base sm:text-lg font-medium'>
                             {product.title}
                         </h2>
 

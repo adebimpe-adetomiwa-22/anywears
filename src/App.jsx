@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Product from './pages/Product';
 import Category from './pages/Category';
 import Error from './pages/Error';
+import Cart from './pages/Cart';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                         path='category/:productCategory'
                         element={<Category />}
                     />
+                    <Route path='cart' element={<Cart />} />
                     <Route path='error' element={<Error />} />
                     <Route path='*' element={<Error />} />
                 </Route>
