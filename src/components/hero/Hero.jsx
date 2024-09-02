@@ -53,6 +53,13 @@ const Hero = () => {
                     textAlign='center'
                     m={2}
                     mt={3}
+                    sx={{
+                        fontSize: {
+                            xs: 11,
+                            sm: 12,
+                            md: 13,
+                        },
+                    }}
                 >
                     We've got everything you need to elevate your lifestyle.
                 </Typography>
