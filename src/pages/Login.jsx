@@ -25,7 +25,8 @@ const Login = () => {
                 <div className='wrapper form-wrapper'>
                     <div className='text-center'>
                         <h2 className='font-semibold text-main'>
-                            VIEW MORE PRODUCTS
+                            {/* VIEW MORE PRODUCTS */}
+                            Log In and Start Shopping
                         </h2>
                     </div>
                     <Divider />

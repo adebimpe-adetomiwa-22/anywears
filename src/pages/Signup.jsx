@@ -26,7 +26,8 @@ const Signup = () => {
                 <div className='wrapper form-wrapper'>
                     <div className='text-center'>
                         <h2 className='font-semibold text-main'>
-                            SHOP WITH DISCOUNT(%)
+                            {/* SHOP WITH DISCOUNT(%) */}
+                            Create Your Account
                         </h2>
                     </div>
                     <Divider />
