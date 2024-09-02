@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <>
             <div className='bg-primary'>
-                <Navbar />
+                <Navbar removeSearchBar={false} />
                 {!searching && <Hero />}
                 <RandomProducts />
                 <Category />

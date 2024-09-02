@@ -27,7 +27,7 @@ const Cart = () => {
     return (
         <section className='cart' id='cart'>
             <div className='navbar bg-primary'>
-                <Navbar />
+                <Navbar removeSearchBar={true} />
             </div>
             <Divider />
             {loading && <Loader />}

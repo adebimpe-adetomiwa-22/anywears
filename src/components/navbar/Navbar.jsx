@@ -29,7 +29,8 @@ const iconSize = {
     },
 };
 
-const Navbar = () => {
+const Navbar = ({ removeSearchBar }) => {
+    // console.log(removeSearchBar);
     const dispatch = useDispatch();
     const handleClick = () => {
         dispatch(toggleDrawer());
@@ -71,9 +72,11 @@ const Navbar = () => {
                                 ANYwears
                             </Typography>
                         </Stack>
-                        <div className='hidden sm:block mr-3'>
-                            <Searchbar padding={0} right='0px' />
-                        </div>
+                        {!removeSearchBar && (
+                            <div className='hidden sm:block mr-3'>
+                                <Searchbar padding={0} right='0px' />
+                            </div>
+                        )}
                         <Stack
                             direction='row'
                             alignItems='center'
@@ -122,9 +125,11 @@ const Navbar = () => {
                     <MenuIcon />
                 </IconButton>
             </Stack> */}
-                <div className='sm:hidden'>
-                    <Searchbar padding={0.5} right='5px' bg='red' />
-                </div>
+                {!removeSearchBar && (
+                    <div className='sm:hidden'>
+                        <Searchbar padding={0.5} right='5px' bg='red' />
+                    </div>
+                )}
             </Box>
         </>
     );
