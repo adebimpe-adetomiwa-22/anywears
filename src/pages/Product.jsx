@@ -1,16 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import productImage from '../assets/images/image2.jpg';
-import { CircularProgress, IconButton, Rating } from '@mui/material';
+import { Alert, CircularProgress, IconButton, Rating } from '@mui/material';
 import Loader from '../components/loader/Loader';
 import { useSelector } from 'react-redux';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CheckIcon from '@mui/icons-material/Check';
 
 const Product = () => {
     const { url } = useSelector((store) => store.productsUrl);
     let { productId } = useParams();
     const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(true);
+    const [messageAlert, setMessageAlert] = useState(false);
+
+    const closeMessageAlert = () => {
+        setMessageAlert(false);
+    };
+    useEffect(() => {
+        if (messageAlert) {
+            setTimeout(() => {
+                setMessageAlert(false);
+            }, 3000);
+        }
+    }, [messageAlert]);
+    const addNewProduct = () => {
+        const dt = new Date().toLocaleDateString();
+        fetch('https://fakestoreapi.com/carts', {
+            method: 'POST',
+            body: JSON.stringify({
+                userId: 5,
+                date: dt,
+                products: [
+                    { productId, quantity: 1 },
+                    // { productId: 1, quantity: 5 },
+                ],
+            }),
+        })
+            .then((res) => res.json())
+            .then((json) => {
+                // console.log(json);
+                setMessageAlert(true);
+            });
+    };
 
     useEffect(() => {
         fetch(`${url}/products/${productId}`)
@@ -30,6 +62,24 @@ const Product = () => {
     } = product;
     return (
         <div className='bg-primary'>
+            {messageAlert && (
+                <div className='bg-secondary text-primary'>
+                    <Alert
+                        severity='success'
+                        // variant='filled'
+                        color='inherit'
+                        // icon={<CheckIcon fontSize='inherit' />}
+                        onClose={closeMessageAlert}
+                    >
+                        <div className='grid grid-cols-3 text-sm md:text-base'>
+                            <p className='truncate'>{product.title}</p>
+                            <p className='col-span-2'>
+                                &nbsp; added successfully.
+                            </p>
+                        </div>
+                    </Alert>
+                </div>
+            )}
             <div className='container'>
                 <Link to='../'>
                     <div className='mb-3'>
@@ -62,7 +112,10 @@ const Product = () => {
                             <p className='text-lg font-semibold'>
                                 ${product.price}
                             </p>
-                            <button className='bg-main text-primary px-3 py-1 rounded-smooth transition hover:opacity-90'>
+                            <button
+                                className='bg-main text-primary px-3 py-1 rounded-smooth transition hover:opacity-90'
+                                onClick={addNewProduct}
+                            >
                                 Add to cart
                             </button>
                         </div>

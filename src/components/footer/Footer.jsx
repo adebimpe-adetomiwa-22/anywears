@@ -6,7 +6,10 @@ import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRound
 const Footer = () => {
     return (
         <footer className='section footer' id='footer'>
-            <a href='#' className='flex flex-col items-center text-sm my-7'>
+            <a
+                href='#'
+                className='flex flex-col items-center text-sm my-7 bg-[#E8DBCC]'
+            >
                 <KeyboardArrowUpRoundedIcon />
                 <p>Back to top</p>
             </a>

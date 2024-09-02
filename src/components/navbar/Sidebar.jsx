@@ -131,12 +131,12 @@ const Sidebar = ({ handleClose }) => {
                 </Box>
                 {/* <Typography>Sidebar</Typography> */}
                 <div className='flex gap-5 justify-center mt-10'>
-                    <Link to='/signup'>
+                    <Link to='/anywears/signup'>
                         <button className='bg-main text-primary btn border border-main'>
                             Signup
                         </button>
                     </Link>
-                    <Link to='/login'>
+                    <Link to='/anywears/login'>
                         <button className='text-main border border-main btn hover:bg-primary'>
                             Login
                         </button>

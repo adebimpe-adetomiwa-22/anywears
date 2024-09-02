@@ -18,6 +18,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Sidebar from './Sidebar';
 import Searchbar from '../searchbar/Searchbar';
+import { Link } from 'react-router-dom';
 
 // vars
 const iconSize = {
@@ -81,33 +82,35 @@ const Navbar = () => {
                             <IconButton color='inherit' size='small'>
                                 <AccountCircleIcon sx={iconSize} />
                             </IconButton>
-                            <IconButton color='inherit' size='small'>
-                                <Badge
-                                    badgeContent={5}
-                                    sx={{
-                                        '& .MuiBadge-badge': {
-                                            backgroundColor: '#9E682A',
-                                            color: '#EEE6DD',
-                                            fontSize: {
-                                                xs: '0.6rem',
-                                                sm: '0.7rem',
+                            <Link to='/anywears/cart'>
+                                <IconButton color='inherit' size='small'>
+                                    <Badge
+                                        badgeContent={5}
+                                        sx={{
+                                            '& .MuiBadge-badge': {
+                                                backgroundColor: '#9E682A',
+                                                color: '#EEE6DD',
+                                                fontSize: {
+                                                    xs: '0.6rem',
+                                                    sm: '0.7rem',
+                                                },
+                                                minHeight: {
+                                                    xs: '13px',
+                                                    sm: '15px',
+                                                },
+                                                minWidth: {
+                                                    xs: '13px',
+                                                    sm: '15px',
+                                                },
+                                                borderRadius: '50%',
+                                                border: '1.5px solid #EEE6DD',
                                             },
-                                            minHeight: {
-                                                xs: '13px',
-                                                sm: '15px',
-                                            },
-                                            minWidth: {
-                                                xs: '13px',
-                                                sm: '15px',
-                                            },
-                                            borderRadius: '50%',
-                                            border: '1.5px solid #EEE6DD',
-                                        },
-                                    }}
-                                >
-                                    <ShoppingCartIcon sx={iconSize} />
-                                </Badge>
-                            </IconButton>
+                                        }}
+                                    >
+                                        <ShoppingCartIcon sx={iconSize} />
+                                    </Badge>
+                                </IconButton>
+                            </Link>
                             {/* <IconButton color='inherit' size='small'>
                                 <ShoppingCartIcon sx={iconSize} />
                             </IconButton> */}
