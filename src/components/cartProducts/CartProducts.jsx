@@ -1,4 +1,4 @@
-import { Divider, IconButton } from '@mui/material';
+import { Button, Divider, IconButton } from '@mui/material';
 import React, { useState } from 'react';
 import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
 // import AddRoundedIcon from '@mui/icons-material/AddRounded';
@@ -19,9 +19,9 @@ const CartProducts = (props) => {
         <>
             <div className='product grid gap-3'>
                 <div className='text-sm'>
-                    <div className='flex gap-7 items-center justify-between px-2'>
+                    <div className='flex gap-5 items-center justify-between px-2'>
                         <img src={image} className='h-10 w-10 object-contain' />
-                        <h2 className=''>{title}</h2>
+                        <h2 className='flex-grow'>{title}</h2>
 
                         <div className='text-base font-semibold'>
                             <h2>${price2}</h2>
@@ -30,9 +30,16 @@ const CartProducts = (props) => {
                 </div>
 
                 <div className='flex justify-between items-center'>
-                    <div className='mt-3 text-xs flex items-center justify-center transition opacity-75 hover:opacity-90 text-main'>
-                        <DeleteOutlineRoundedIcon />
-                        <button>Remove</button>
+                    <div className='text-xs flex items-center justify-center transition opacity-75 hover:opacity-90 text-main'>
+                        {/* <DeleteOutlineRoundedIcon />
+                        <button>Remove</button> */}
+                        <Button
+                            size='small'
+                            color='first'
+                            startIcon={<DeleteOutlineRoundedIcon />}
+                        >
+                            Remove
+                        </Button>
                     </div>
                     <div className='flex flex-col items-center gap-3'>
                         <div className='flex items-center'>
