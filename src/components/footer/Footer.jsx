@@ -3,16 +3,19 @@ import React from 'react';
 
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 
-const Footer = () => {
+const Footer = ({ nav }) => {
     return (
         <footer className='section footer' id='footer'>
-            <a
-                href='#'
-                className='flex flex-col items-center text-sm my-7 bg-[#E8DBCC]'
-            >
-                <KeyboardArrowUpRoundedIcon />
-                <p>Back to top</p>
-            </a>
+            {!nav && <div className='mt-7'></div>}
+            {nav && (
+                <a
+                    href='#'
+                    className='flex flex-col items-center text-sm my-7 bg-[#E8DBCC]'
+                >
+                    <KeyboardArrowUpRoundedIcon />
+                    <p>Back to top</p>
+                </a>
+            )}
             <div className='container'>
                 <div className='text-[10px] flex flex-wrap gap-5 justify-center'>
                     <a href='#?'>CONTACT US</a>

@@ -14,7 +14,7 @@ const Home = () => {
                 {!searching && <Hero />}
                 <RandomProducts />
                 <Category />
-                <Footer />
+                <Footer nav={true} />
             </div>
         </>
     );

@@ -5,6 +5,7 @@ import signupReducer from './features/form/signupSlice';
 import productsReducer from './features/products/productsSlice';
 import searchReducer from './features/search/searchSlice';
 import productsUrlReducer from './features/urls/productsUrl/productsUrlSlice';
+import cartReducer from './features/cart/cartSlice';
 
 export const store = configureStore({
     reducer: {
@@ -14,5 +15,6 @@ export const store = configureStore({
         products: productsReducer,
         search: searchReducer,
         productsUrl: productsUrlReducer,
+        cart: cartReducer,
     },
 });

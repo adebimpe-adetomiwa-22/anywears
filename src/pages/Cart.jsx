@@ -3,9 +3,19 @@ import Navbar from '../components/navbar/Navbar';
 import { Divider } from '@mui/material';
 import Loader from '../components/loader/Loader';
 import axios from 'axios';
-import CartProducts from '../components/cartProducts/CartProducts';
+import CartProducts2 from '../components/cartProducts/CartProducts';
+import Footer from '../components/footer/Footer';
+
+// from slice
+// import {
+//     updateCart,
+//     addProduct,
+//     removeProduct,
+// } from '../features/cart/cartSlice';
+// import { useDispatch } from 'react-redux';
 
 const Cart = () => {
+    // const dispatch = useDispatch();
     const [loading, setLoading] = useState(true);
     const [cart, setCart] = useState([]);
     const [products, setProducts] = useState([]);
@@ -49,6 +59,12 @@ const Cart = () => {
         }
     }, [filterProducts]);
 
+    // useEffect(() => {
+    //     if (cartProducts.length > 0) {
+    //         dispatch(updateCart(cartProducts));
+    //     }
+    // }, [cartProducts]);
+
     const getProductsData = () => {
         const productIds = new Set(
             cart.products.map((product) => product.productId)
@@ -67,7 +83,7 @@ const Cart = () => {
             {loading ? (
                 <Loader />
             ) : (
-                <div className='container'>
+                <div className='container md:w-4/5 lg:w-3/5 xl:w-3/6'>
                     <div>
                         <h2 className='text-lg font-semibold mb-3'>
                             Cart ({cart.products.length})
@@ -75,7 +91,7 @@ const Cart = () => {
                         <Divider />
                         <div className='cart-products flex flex-col gap-7 mt-9'>
                             {cartProducts.map((product, index) => (
-                                <CartProducts
+                                <CartProducts2
                                     key={product.id}
                                     {...product}
                                     last={index === cartProducts.length - 1}
@@ -85,6 +101,7 @@ const Cart = () => {
                     </div>
                 </div>
             )}
+            <Footer nav={false} />
         </section>
     );
 };
