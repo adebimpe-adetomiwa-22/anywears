@@ -62,15 +62,17 @@ const Navbar = ({ removeSearchBar }) => {
                             >
                                 <MenuRoundedIcon fontSize='small' />
                             </IconButton>
-                            <Typography
-                                variant='subtitle2'
-                                fontFamily='Viner Hand ITC'
-                                fontWeight='600'
-                                // fontSize='14px'
-                                color='#9E682A'
-                            >
-                                ANYwears
-                            </Typography>
+                            <Link to='/anywears'>
+                                <Typography
+                                    variant='subtitle2'
+                                    fontFamily='Viner Hand ITC'
+                                    fontWeight='600'
+                                    // fontSize='14px'
+                                    color='#9E682A'
+                                >
+                                    ANYwears
+                                </Typography>
+                            </Link>
                         </Stack>
                         {!removeSearchBar && (
                             <div className='hidden sm:block mr-3'>
@@ -88,7 +90,7 @@ const Navbar = ({ removeSearchBar }) => {
                             <Link to='/anywears/cart'>
                                 <IconButton color='inherit' size='small'>
                                     <Badge
-                                        badgeContent={5}
+                                        badgeContent={2}
                                         sx={{
                                             '& .MuiBadge-badge': {
                                                 backgroundColor: '#9E682A',
