@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/navbar/Navbar';
-import { Divider } from '@mui/material';
+import { Button, Divider } from '@mui/material';
 import Loader from '../components/loader/Loader';
 import axios from 'axios';
 import CartProducts2 from '../components/cartProducts/CartProducts';
 import Footer from '../components/footer/Footer';
+
+import ShoppingBasketRoundedIcon from '@mui/icons-material/ShoppingBasketRounded';
 
 // from slice
 // import {
@@ -21,6 +23,7 @@ const Cart = () => {
     const [products, setProducts] = useState([]);
     const [cartProducts, setCartProducts] = useState([]);
     const [filterProducts, setFilterProducts] = useState(false);
+    const [total, setTotal] = useState(0);
 
     const fetchProducts = async () => {
         try {
@@ -93,10 +96,33 @@ const Cart = () => {
                             {cartProducts.map((product, index) => (
                                 <CartProducts2
                                     key={product.id}
+                                    setTotal={setTotal}
                                     {...product}
                                     last={index === cartProducts.length - 1}
                                 />
                             ))}
+                        </div>
+                        <div className='mt-12 flex flex-col gap-5 items-center'>
+                            <h2>
+                                Total:{' '}
+                                <span className='text-lg font-semibold'>
+                                    ${total}
+                                </span>
+                            </h2>
+                            <div className=''>
+                                <Button
+                                    variant='contained'
+                                    color='first'
+                                    size='small'
+                                    // sx={{
+                                    //     paddingX: 2,
+                                    //     borderRadius: 1,
+                                    // }}
+                                    startIcon={<ShoppingBasketRoundedIcon />}
+                                >
+                                    Checkout
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
