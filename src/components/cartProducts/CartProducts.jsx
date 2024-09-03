@@ -6,6 +6,8 @@ import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
 import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
 import RemoveCircleOutlineRoundedIcon from '@mui/icons-material/RemoveCircleOutlineRounded';
 
+import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
+
 const CartProducts = (props) => {
     // console.log(props);
     const { image, price, title, last } = props;
@@ -48,7 +50,7 @@ const CartProducts = (props) => {
                                     }
                                 }}
                             >
-                                <RemoveCircleOutlineRoundedIcon />
+                                <RemoveCircleOutlineRoundedIcon color='first' />
                             </IconButton>
                             <p className='font-mediumtext-lg'>{amount}</p>
                             <IconButton
@@ -61,7 +63,7 @@ const CartProducts = (props) => {
                                     );
                                 }}
                             >
-                                <AddCircleOutlineRoundedIcon />
+                                <AddCircleRoundedIcon color='first' />
                             </IconButton>
                         </div>
                     </div>
