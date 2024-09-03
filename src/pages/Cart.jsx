@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/navbar/Navbar';
-import { Button, Divider } from '@mui/material';
+import { Button, CircularProgress, Divider } from '@mui/material';
 import Loader from '../components/loader/Loader';
 import axios from 'axios';
 import CartProducts2 from '../components/cartProducts/CartProducts';
@@ -62,11 +62,17 @@ const Cart = () => {
         }
     }, [filterProducts]);
 
-    // useEffect(() => {
-    //     if (cartProducts.length > 0) {
-    //         dispatch(updateCart(cartProducts));
-    //     }
-    // }, [cartProducts]);
+    useEffect(() => {
+        if (cartProducts.length > 0) {
+            // dispatch(updateCart(cartProducts));
+            const prices = cartProducts.map((product) => product.price);
+            const amount = prices.reduce(
+                (accumulator, currentValue) => accumulator + currentValue,
+                0
+            );
+            setTotal(amount);
+        }
+    }, [cartProducts]);
 
     const getProductsData = () => {
         const productIds = new Set(
@@ -84,7 +90,9 @@ const Cart = () => {
             </div>
             <Divider />
             {loading ? (
-                <Loader />
+                <div className='w-full py-10 flex justify-center items-center'>
+                    <CircularProgress color='first' />
+                </div>
             ) : (
                 <div className='container md:w-4/5 lg:w-3/5 xl:w-3/6'>
                     <div>
@@ -106,7 +114,7 @@ const Cart = () => {
                             <h2>
                                 Total:{' '}
                                 <span className='text-lg font-semibold'>
-                                    ${total}
+                                    ${parseFloat(total.toFixed(2))}
                                 </span>
                             </h2>
                             <div className=''>

@@ -10,7 +10,7 @@ import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 
 const CartProducts = (props) => {
     // console.log(props);
-    const { image, price, title, last } = props;
+    const { image, price, title, last, setTotal } = props;
     const [amount, setAmount] = useState(1);
     const [price2, setPrice2] = useState(price);
     // console.log(price);
@@ -54,6 +54,9 @@ const CartProducts = (props) => {
                                                 (prevPrice2 - price).toFixed(2)
                                             )
                                         );
+                                        setTotal(
+                                            (prevTotal) => prevTotal - price
+                                        );
                                     }
                                 }}
                             >
@@ -68,6 +71,7 @@ const CartProducts = (props) => {
                                             (prevPrice2 + price).toFixed(2)
                                         )
                                     );
+                                    setTotal((prevTotal) => prevTotal + price);
                                 }}
                             >
                                 <AddCircleRoundedIcon color='first' />
